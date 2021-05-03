@@ -1,0 +1,628 @@
+@-ms-viewport {
+    width: device-width;
+}
+/* TAG level */
+html {
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+}
+img {
+    border: none;
+}
+body {
+    background-color: rgb(0,47,93);
+    background-image: linear-gradient(180deg, rgba(0,19,43,1) 0%, rgba(0,47,93,1) 65%);
+    background-repeat: no-repeat;
+    font-family: Verdana,Helvetica,Arial,Sans-serif;
+    margin: 0;
+    margin-top: 2%;
+    padding: 0;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    background: rgb(255,221,7);
+    background: linear-gradient(180deg, rgba(255,221,7,1) 0%, rgba(238,184,0,1) 100%);
+    border-radius: 3%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-box-shadow: 0px 3px 7px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 2% 0 2% 6%;
+}
+h2 {
+    margin: 0;
+    padding: 0 0 2% 1%;
+    font-weight: bold;
+    font-size: 1.125em;
+    font-family: Verdana,Helvetica,Arial,Sans-serif;
+    color: #AC8A00;
+}
+h3 {
+    margin: 0;
+    padding: 9% 0 9% 6%;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: Verdana,Helvetica,Arial,Sans-serif;
+    color: #002F5D;
+}
+h4 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3%;
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: Verdana,Helvetica,Arial,Sans-serif;
+    color: #002F5D;
+}
+h5 {
+    font-size: 1em;
+}
+
+/* Responsive Controls */
+.desktop {
+    display: none !important;
+}
+.mobile {
+    display: inherit !important;
+}
+
+/* Useful styles */
+/* Used to clear floated divs but not add extra spacing */
+.divider {
+    clear: both;
+    font-size: 0px;
+    line-height: 0px;
+    height: 0px;
+    width: auto;
+}
+/* Used in positioning elements */
+.rp {
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+.divRel {
+    font-size: 1em;
+    line-height: normal;
+    position: relative;
+}
+/* quick class to italicize text */
+.i {
+    font-style:italic;
+}
+/* quick class to bold text */
+.b {
+    font-weight:bold;
+}
+/* Applies proper indentation to uls right of the left nav and calendar */
+.ul-right {
+    text-align: left;
+}
+/* Aligns an image on the left side of content. */
+.img-left {
+    text-align:left;
+    padding-bottom: 2%;
+}
+/* Aligns an image on the right side of content. */
+.img-right {
+    text-align: right;
+    padding-bottom: 2%;
+}
+.img {
+    width:100%;
+}
+.p {
+    margin: 0;
+    margin-bottom: 15%;
+    padding: 2% 1% 0 3%;
+    clear: right;
+}
+.btn {
+    background: rgb(0,36,74);
+    background: linear-gradient(180deg, rgba(0,36,74,1) 0%, rgba(28,74,119,1) 50%, rgba(0,40,80,1) 51%, rgba(0,50,106,1) 100%);
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: #FFFFFF;
+    border: 2px solid #ffd00d;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+.err {
+    margin: 6% 0 6% 3%;
+    padding: 6%;
+    background-color: #FFFFCC;
+    border: dashed 1px #FF0000;
+}
+.error {
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    color: #FF0000;
+}
+.breadcrumb {
+    text-align: right;
+    font-size: 0.875em;
+}
+.btn-container {
+    text-align: center;
+}
+.lastUpdate {
+    text-align: right;
+    font-size: 0.75em;
+    font-style:italic;
+}
+/* Mobile Nav */
+#mMenu {
+    background: none;
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+    #mMenu #close {
+        background-color: rgba(0,0,0,0.75);
+        cursor: pointer;
+        float: left;
+        height: 100%;
+        width: 25%;
+    }
+    #mMenu #mContent {
+        background-color: rgb(0,47,93);
+        background-image: linear-gradient(180deg, rgba(0,19,43,1) 0%, rgba(0,47,93,1) 65%);
+        background-repeat: no-repeat;
+        float: left;
+        height: 100%;
+        padding: 2% 0;
+        width: 75%;
+    }
+        #mMenu #mContent #mSub-nav {
+            padding-left:5%;
+        }
+        #mMenu #mContent a {
+            display: block;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 0.875em;
+            padding: 2%;
+        }
+            #mMenu #mContent a:hover {
+                background: rgb(232,210,46);
+                background: linear-gradient(180deg, rgba(232,210,46,1) 0%, rgba(246,229,19,1) 50%, rgba(224,198,62,1) 51%, rgba(248,230,44,1) 100%);
+                color: #000000;
+            }
+            #mMenu #mContent a:active {
+                background: rgb(232,210,46);
+                background: linear-gradient(180deg, rgba(232,210,46,1) 0%, rgba(246,229,19,1) 50%, rgba(224,198,62,1) 51%, rgba(248,230,44,1) 100%);
+                color: #000000;
+            }
+        #mMenu #mContent #mExtra {
+            padding-top: 2%;
+            padding-left: 5%;
+        }
+        /* Layout */
+        #resize {
+            height: 100%;
+            position: absolute;
+            top: -10px;
+        }
+#stage {
+    width: 90%;
+    margin: 0 auto 0 auto;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#ban-content {
+    width: 100%;
+    background: #FAFAFA url(/images/ban-bg.jpg) repeat-x;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#mMenu-btn {
+    position:absolute;
+    left:83%;
+    text-align:right;
+    padding:2%;
+}
+    #mMenu-btn img {
+        cursor: pointer;
+    }
+.wh-logo {
+    text-align:center;
+    padding-top:3%;
+}
+#ban-school {
+    text-align: center;
+    padding-bottom:3%;
+}
+#text-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.875em;
+    font-weight: bold;
+    color: #002f5d;
+}
+#nav {
+    border: solid 2px #ffd00d;
+    border-left: none;
+    border-right: none;
+    background: rgb(0,36,74);
+    background: linear-gradient(180deg, rgba(0,36,74,1) 0%, rgba(28,74,119,1) 50%, rgba(0,40,80,1) 51%, rgba(0,50,106,1) 100%);
+    width: 100%;
+    height:5%;
+    text-align:center;
+}
+    #nav .mobile {
+        height:100%;
+    }
+    #nav a {
+        height: 100%;
+        display: inline-block;
+        width: 49%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.875em;
+        font-family: Verdana,Helvetica,Arial,sans-serif;
+        color: #FFFFFF;
+        vertical-align: middle;
+        padding-top:2%;
+        padding-bottom:2%;
+    }
+        #nav a:hover {
+            background: rgb(232,210,46);
+            background: linear-gradient(180deg, rgba(232,210,46,1) 0%, rgba(246,229,19,1) 50%, rgba(224,198,62,1) 51%, rgba(248,230,44,1) 100%);
+            color:#000000;
+        }
+        #nav a:focus {
+            background: rgb(232,210,46);
+            background: linear-gradient(180deg, rgba(232,210,46,1) 0%, rgba(246,229,19,1) 50%, rgba(224,198,62,1) 51%, rgba(248,230,44,1) 100%);
+            color: #000000;
+        }
+#content {
+    background: #FFFFFF url(/images/screaming-eagle.png) no-repeat top left;
+    padding:2%;
+}
+    #content a {
+        color:#0054A6;
+    }
+        #content a:hover {
+            text-decoration:underline;
+        }
+        #content a:active {
+            text-decoration: underline;
+        }
+    #content #right-content {
+        background-color: transparent;
+        padding: 3% 0% 6% 0;
+    }
+#footer {
+    width: 100%;
+    height: 15%;
+    clear: both;
+    background-color: rgb(1,60,126);
+    background-image: linear-gradient(180deg, rgba(1,60,126,1) 0%, rgba(0,43,86,1) 100%);
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    border-top: solid 2px #FFCE00;
+    -webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.75);
+}
+    #footer a {
+        font-weight: bold;
+        color: #FFFFFF;
+        font-size: 0.70em;
+    }
+        #footer a:hover {
+            color:#F3C400;
+        }
+        #footer a:active {
+            color: #F3C400;
+        }
+    #footer .content {
+        padding-top: 2%;
+        width: 90%;
+        margin: 0 auto 0 auto;
+        text-align:center;
+    }
+    #footer #copy {
+        font-weight:bold;
+        padding-top: 1%;
+        font-size: 0.625em;
+        color: #A1A1A1;
+    }
+        #footer #copy a {
+            color: #A1A1A1;
+            font-size: 1em;
+        }
+            #footer #copy a:hover {
+                color: #A1A1A1;
+            }
+@media screen and (min-width:955px) {
+    /* TAG level */
+    body {
+        margin-top: 34px;
+        height: auto;
+    }
+    h1 {
+        float: right;
+        padding: 2px 0px 0px 10px;
+        width: 692px;
+        height: 33px;
+        background: url(/images/hdr-bg.png) no-repeat;
+        font-family: Verdana,Helvetica,Arial,Sans-serif;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .h1-container {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        width: 705px;
+        height: 35px;
+    }
+    .h1-tail {
+        width: 16px;
+        height: 55px;
+        position: relative;
+        left: 705px;
+        top: 14px;
+        background-image: url(/images/hdr-tail.png);
+        background-repeat: no-repeat;
+    }
+    h2 {
+        padding: 0 0 15px 15px;
+        width: 677px;
+        height: 35px;
+    }
+    h3 {
+        padding: 15px 0 15px 10px;
+    }
+    h4 {
+        padding-bottom: 5px;
+    }
+    .p {
+        padding: 5px 10px 0 15px;
+        margin-bottom: 50px;
+    }
+    .err {
+        margin: 10px 0px 10px 5px;
+        padding: 10px;
+        background-color: #FFFFCC;
+        border: dashed 1px #FF0000;
+    }
+    /* Responsive Controls */
+    .desktop {
+        display: inherit !important;
+    }
+    .mobile {
+        display: none !important;
+    }
+
+    /* Useful styles */
+    .sub-page {
+        margin-top: -12px;
+    }
+    /* Applies proper indentation to uls right of the left nav and calendar */
+    .ul-right {
+        width: 675px;
+        float: right;
+        text-align: left;
+    }
+    /* Aligns an image on the left side of content. */
+    .img-left {
+        float: left;
+        padding-bottom: 10px;
+        padding-right: 15px;
+    }
+    /* Aligns an image on the right side of content. */
+    .img-right {
+        float: right;
+        padding-bottom: 10px;
+        padding-left: 15px;
+    }
+    .img {
+        width:auto;
+        height:auto;
+    }
+    /* Layout */
+    #stage {
+        width: 955px;
+        height: auto;
+    }
+    #banner {
+        width: 955px;
+        height: 131px;
+        position: relative;
+        z-index: 20;
+    }
+    #ban-top {
+        width: 955px;
+        height: 10px;
+        background: url(/images/ban-corners.png) no-repeat;
+    }
+    #ban-content {
+        width: 955px;
+        height: 121px;
+        background-color: transparent;
+        background: url(/images/ban-bg.jpg) repeat-x;
+        border-radius: 0;
+    }
+    #mMenu-btn {
+        display: none;
+    }
+    .wh-logo {
+        width: 153px;
+        height: 155px;
+        position: relative;
+        left: 10px;
+        text-align: left;
+    }
+    #ban-school {
+        width: 955px;
+        height: 121px;
+        text-align: center;
+        background: url(/images/ban-school.png) no-repeat 171px 0px;
+    }
+    #school-name {
+        margin-top: 58px;
+    }
+    #nav {
+        width: 955px;
+        height: 35px;
+        position: relative;
+        z-index: 15;
+        text-align:left;
+    }
+        #nav a {
+            display:inline-block;
+            padding-top:6px;
+            padding-left:5px;
+            padding-right:5px;
+            padding-bottom:0;
+            height:33px;
+        }
+        #nav .left-spacer {
+            display:inline-block;
+            height:35px;
+            width:166px;
+        }
+        #nav #nav-parents {
+            width:70px;
+        }
+        #nav #nav-students {
+            width:80px;
+        }
+        #nav #nav-dept {
+            width:111px;
+        }
+        #nav #nav-fine-arts {
+            width:82px;
+        }
+        #nav #nav-athletics {
+            width:80px;
+        }
+        #nav #nav-alumni {
+            width:65px;
+        }
+        #nav #nav-counseling {
+            width:97px;
+        }
+        #nav #nav-library {
+            width:69px;
+        }
+        #nav #nav-about-us {
+            width:84px;
+        }
+    #content {
+        width: 955px;
+        padding: 10px 0 17px 15px;
+        height:auto;
+    }
+        #content #left-nav {
+            position:relative;
+            z-index:55;
+            margin-left: -15px;
+            margin-right: 10px;
+            padding-bottom: 10px;
+            width: 240px;
+            float: left;
+            display: block;
+        }
+            #content #left-nav h3 a {
+                display: inline-block;
+                padding: 5px;
+                color: #002F5D;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.625em;
+                border: solid 2px #002F5D;
+                border-radius: 5px;
+                position:relative;
+                top:-3px;
+                width:auto;
+            }
+            #content #left-nav a {
+                display:block;
+                padding:3px 0 4px 5px;
+                color:#000000;
+                font-size:0.875em;
+                width:230px;
+            }
+                #content #left-nav a:hover {
+                    background-color: #FFCE00;
+                    text-decoration:none;
+                }
+                #content #left-nav a:focus {
+                    background-color: #FFCE00;
+                    text-decoration: none;
+                }
+            #content #left-nav #divSectionNav {
+                margin-left: 10px;
+            }
+            #content #left-nav #divExtra {
+                margin-left: 10px;
+                margin-top: 15px;
+            }
+        #content #right-content {
+                padding: 10px 10px 25px 0px;
+                width: 692px;
+                float: left;
+            }
+            #content #right-content .hdr-img {
+                width: 692px;
+                padding-bottom: 10px;
+                height: 125px;
+            }
+    .awards-divider {
+        height:5px;
+    }
+    #awards {
+        position:relative;
+        z-index:10;
+    }
+        #awards .award {
+            font-size: 0px;
+            line-height: 0px;
+            position: absolute;
+            top: -30px;
+            height: 94px;
+            width: 1px;
+        }
+        #awards .position {
+            position:relative;
+        }
+        #awards #us-new {
+            left:-15px;
+        }
+        #awards #newsweek {
+            left:861px;
+        }
+    #footer {
+        height: 60px;
+    }
+        #footer .content {
+            padding-top: 5px;
+            width: 955px;
+        }
+        #footer #copy {
+            padding-top:5px;
+        }
+}
